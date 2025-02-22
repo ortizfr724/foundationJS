@@ -30,6 +30,7 @@ var: var works similar to let, in that variables assigned this way can be reassi
 Variable Naming 
 
 let:
+
 Names must contain only letters, digits, or the symbols $ and _ (underscore)
 You can not start a name in JavaScript using a digit.
 
@@ -44,10 +45,11 @@ Reserved words: let, class, return, and function are reserved, because they are 
                 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords
 
 const:
+
 To declare a constant (unchanging) variable, use const instead of let.
 
 Variables declared using const are called "constants". They cannot be reassigned and any attempt to do so will cause and error.
-When programmer is sure that that a variable will not change, they use the const to guaranty and communicate that fact to everyone.
+When programmer is sure that a variable will not change, they use the const to guaranty and communicate that fact to everyone.
 
 const examples: birthdate, social security numbers, company name, ect...
 
@@ -64,15 +66,18 @@ Naming Things Right
 
 A variable name should have a clean, obvious meaning, describing the data that it stores.
 
-Variable naming is one of the most important and complex skills in programming. A glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+Variable naming is one of the most important and complex skills in programming. A glance at variable names can reveal which code was written by a beginner 
+versus an experienced developer.
 
 Some good-to-follow rules are:
 
 * Use human-readable names like userName or shoppingCart.
 * Stay away from abbreviations or short names like a, b, and c, unless you know what you’re doing.
-* Make names maximally descriptive and concise. Examples of bad names are data and value. Such names say nothing. It’s only okay to use them if the context of the     code makes it exceptionally obvious which data or value the variable is referencing.
+* Make names maximally descriptive and concise. Examples of bad names are data and value. Such names say nothing. It’s only okay to use them if the context 
+  of the code makes it exceptionally obvious which data or value the variable is referencing.
 
-* Agree on terms within your team and in your mind. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of      currentVisitor or newManInTown.
+* Agree on terms within your team and in your mind. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of
+  currentVisitor or newManInTown.
 
 Numbers
 
@@ -91,7 +96,7 @@ JavaScript Arithmetic Operators:
 
 Operators and Operand 
 
-Operator 100 Operand + Operator 50
+Operator (100) Operand (+) Operator (50).
 
 Data Types and Conditions
 
@@ -110,12 +115,13 @@ There are eight (8) basic data types in javaScript
 * Seven primitive data types:
      
      * numbers: for numbers of any kind, integer or floating point, integers are limited by ±(253-1).
-     * bigint for integer numbers of arbitrary length.
-     * string for strings. A string may have zero or more characters, there's no separate single-character type.
-     * boolean for true/false.
-     * null for unknown values - a standalone type that has a single value null.
-     * undefined for unassigned values a standalone type that has a single value undefined.
-     * symbol for unique identifiers.
+     * bigint: for integer numbers of arbitrary length.
+     * string: for strings. A string may have zero or more characters, there's no separate single-character type.
+     * boolean: for true/false.
+     * null: for unknown values - a standalone type that has a single value null.
+     * undefined: for unassigned values a standalone type that has a single value 'undefined'.
+     * symbol: for unique identifiers.
+
 * One non-primitive data type:
      
      * object for more complex data structures.
@@ -124,7 +130,7 @@ There are eight (8) basic data types in javaScript
      
      * Usually used for typeof x, but typeof(x) is also possible.
      * Returns a string with the name of the type, like string.
-     * For null returns "object" this is an error in the language, its not actually an object.
+     * For null returns 'object' this is an error in the language, its not actually an object.
 
 Strings: Depending on what kind of work you’re doing, you might end up working more with pieces 
          of text rather than numbers. A string is a piece of text… and is a fundamental building block 
@@ -142,11 +148,14 @@ Declaring Strings
 
 Just like we did with numbers, we are declaring a variable, initializing it with a string value, and then returning the value. The only difference 
 here is that when writing a string, you need to surround the value with quotes. Any text without quotes around it is interpreted as a variable name, 
-property name, reserved word, or similar. Single quotes, double quotes, and backticks In JavaScript, you can choose single quotes ('), double quotes ("), or backticks (`) to wrap your strings in. You must use the same character for the start and end of a string, or you will get an error.
+property name, reserved word, or similar. Single quotes, double quotes, and backticks In JavaScript, you can choose single quotes ('), double quotes ("), 
+or backticks (`) to wrap your strings in. You must use the same character for the start and end of a string, or you will get an error.
 
-Strings declared using single quotes and strings declared using double quotes are the same, and which you use is down to personal preference — although it is good practice to choose one style and use it consistently in your code.
+Strings declared using single quotes and strings declared using double quotes are the same, and which you use is down to personal preference — although 
+it is good practice to choose one style and use it consistently in your code.
 
-Strings declared using backticks are a special kind of string called a template literal. In most ways, template literals are like normal strings, but they have some special properties:
+Strings declared using backticks are a special kind of string called a template literal. In most ways, template literals are like normal strings, 
+but they have some special properties:
 
   * you can embed javaScript in them.
   * you can declare template literals over multiple lines.
@@ -184,4 +193,20 @@ Template literals respect the line breaks in the source code, so you can write s
      the spoon ran away with the bowl, 
      and humpty-dumpty fell off the wall!`;
      console.log(smallParagraph);
+
+To have the equivalent output using a normal string you'd have to include line break characters '(\n)' in the string.
+
+Including Quotes in Strings
+
+Since we use quotes to indicate the start and end of strings, how can we include actual quotes in strings?
+
+One common option is to use single quotes to enclose the whole string and double quotes to enclose the quoted characters:
+
+  * const message = ' We used single quotes "this is a message that is a quote" to enclose the string'; 
+
+Another option is to escape the problem quotation mark. Escaping characters means that we do something to them to make 
+sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character.
+
+  * const escapeQuote = 'I\'ve written the other option to escape the problem quotation mark';
+
 
