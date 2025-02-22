@@ -86,3 +86,14 @@
 // and humpty-dumpty fell off the wall!`;
 // console.log(smallParagraph);
 
+// Including Quotes in strings
+
+// Using a single quotes to enclose the whole string and double quotes to enclose the quoted characters; this is the first option
+// for including quotes in strings
+// const message = ' We used single quotes "this is a message that is a quote" to enclose the string';
+// console.log(message);
+
+// // This example uses the backslash (\) to escape the quotation mark in the word I have; second option to include quotes in strings
+// const escapeQuote = 'I\'ve written the other option to escape the problem quotation mark';
+// console.log(escapeQuote);
+
